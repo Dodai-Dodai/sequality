@@ -7,7 +7,7 @@ public class CalculateTest {
 
   private final Calculate calculator = new Calculate();
 
-  /* ---------- sum ---------------------------------------------------- */
+  // sum
 
   @Test
   public void sum_shouldAddTwoPositives() {
@@ -15,17 +15,15 @@ public class CalculateTest {
     assertEquals(5, calculator.sum(2, 3));
   }
 
-  /* ---------- average ------------------------------------------------ */
+  // average
 
   @Test
-  public void average_shouldComputeIntegerAverage() {
+  public void average_shouldComputeDoubleAverage() {
     // 通常ケース
-    assertEquals(5, calculator.average(4, 6));
-    // 切り捨て（整数除算）も確認
-    assertEquals(1, calculator.average(1, 2));
+    assertEquals(2.5, calculator.average(2, 3), 0.001);
   }
 
-  /* ---------- sumOdd ------------------------------------------------- */
+  // sumOdd
 
   @Test
   public void sumOdd_shouldReturnSumOfOddNumbersInRange() {
@@ -39,7 +37,7 @@ public class CalculateTest {
     assertEquals(0, calculator.sumOdd(2, 2));
   }
 
-  /* ---------- sumEven ----------------------------------------------- */
+  // sumEven
 
   @Test
   public void sumEven_shouldReturnSumOfEvenNumbersInRange() {
